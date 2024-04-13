@@ -1,0 +1,19 @@
+{
+  "server-component": {
+    "welcome": "欢迎"
+  },
+  "counter": {
+    "increment": "增加",
+    "decrement": "减少"
+  },
+  "banner": {
+    "title1": "无论晴雨，",
+    "title2": "熊市或牛市。"
+  },
+  "hero": {
+    "title": "我们依然在这里。",
+    "subtitle": "你已经度过了熊市，现在是时候庆祝了。过去的一年对Solana来说非常艰难，但我们在这里，不断成长，准备迎接接下来的挑战。$COCKR将会空投给我们的社区，开启新的Solana季节，并提醒大家即使在熊市的深渊中，蟑螂也总能生存下去。",
+    "button1Text": "阅读主论文",
+    "button2Text": "其他"
+  }
+}

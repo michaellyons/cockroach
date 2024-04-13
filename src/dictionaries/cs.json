@@ -1,0 +1,19 @@
+{
+  "server-component": {
+    "welcome": "Vítejte"
+  },
+  "counter": {
+    "increment": "Přidat",
+    "decrement": "Ubrat"
+  },
+  "banner": {
+    "title1": "Ať už prší nebo svítí slunce,",
+    "title2": "medvěd nebo býk."
+  },
+  "hero": {
+    "title": "Stále jsme zde.",
+    "subtitle": "Přežili jste medvěda a nyní je čas slavit. Poslední rok byl pro Solanu těžký, ale my jsme zde, rosteme a jsme připraveni na to, co přijde dále. $COCKR bude vzdušně shazován naší komunitě, aby odstartoval novou sezonu Solany a připomněl všem, že švábi vždy přežijí v hlubinách medvědího trhu.",
+    "button1Text": "Přečtěte si Masterpaper",
+    "button2Text": "Něco"
+  }
+}

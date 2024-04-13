@@ -2,11 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-family-base: 'JetBrains Mono', monospace;
 }
+
+@layer components {
+  .font-archivo {
+    font-family: 'Archivo', sans-serif;
+  }
+
+  .font-archivo-bold {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+  }
+
+  .text-archivo-base {
+    @apply text-base font-archivo;
+  }
+
+  .text-archivo-lg {
+    @apply text-lg font-archivo;
+  }
+
+  .text-archivo-xl {
+    @apply text-xl font-archivo;
+  }
+
+  .text-archivo-2xl {
+    @apply text-2xl font-archivo;
+  }
+
+  .text-archivo-bold-base {
+    @apply text-base font-archivo-bold;
+  }
+
+  .text-archivo-bold-lg {
+    @apply text-lg font-archivo-bold;
+  }
+
+  .text-archivo-bold-xl {
+    @apply text-xl font-archivo-bold;
+  }
+
+  .text-archivo-bold-2xl {
+    @apply text-2xl font-archivo-bold;
+  }
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,6 +73,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: var(--font-family-base);
 }
 
 @layer utilities {

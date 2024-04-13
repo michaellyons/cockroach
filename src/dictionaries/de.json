@@ -1,0 +1,19 @@
+{
+  "server-component": {
+    "welcome": "Willkommen"
+  },
+  "counter": {
+    "increment": "Erhöhen",
+    "decrement": "Verringern"
+  },
+  "banner": {
+    "title1": "Regen oder Sonnenschein,",
+    "title2": "Bär oder Bulle."
+  },
+  "hero": {
+    "title": "Wir sind immer noch hier.",
+    "subtitle": "Du hast den Bären überlebt und jetzt ist es Zeit zu feiern. Das letzte Jahr war hart für Solana, aber wir sind hier, wachsen und sind bereit für das, was als Nächstes kommt. $COCKR wird unserer Gemeinschaft airdropped, um die neue Solana-Saison zu starten und jeden daran zu erinnern, dass die Kakerlaken immer in den Tiefen des Bärenmarktes gedeihen werden.",
+    "button1Text": "Das Masterpaper lesen",
+    "button2Text": "Etwas"
+  }
+}
