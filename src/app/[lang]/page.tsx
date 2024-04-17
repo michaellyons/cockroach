@@ -1,6 +1,6 @@
 import { getDictionary } from "../../../get-dictionary";
 import { Locale } from "../../../i18n-config";
-import LocaleSwitcher from "@/app/LangSwitch";
+import LocaleSwitcher from "@/components/LangSwitch";
 
 export default async function IndexPage({
   params: { lang },
@@ -8,7 +8,6 @@ export default async function IndexPage({
   params: { lang: Locale };
 }) {
   const dictionary = await getDictionary(lang);
-
   return (
     <div>
       <LocaleSwitcher />

@@ -1,6 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react';
-
+import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 
 function getWindowDimensions(wind = { innerWidth: 1, innerHeight: 1}) {
   const { innerWidth: width = 1, innerHeight: height = 1 } = wind;
@@ -13,7 +12,7 @@ function getWindowDimensions(wind = { innerWidth: 1, innerHeight: 1}) {
 export function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions(window));
     }
@@ -25,36 +24,43 @@ export function useWindowDimensions() {
   return windowDimensions;
 }
 
+const RATE = .42
+
+const BUG_WIDTH = 64;
+
 export const MovingBanner: React.FC = () => {
   const bannerRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const { width } = useWindowDimensions();
+  const widthRequirement = Math.floor(width / 64) + 2
   useEffect(() => {
     let animationFrameId: number;
     const animate = () => {
-      setOffset(prevOffset => (prevOffset + 1) % width);
+      setOffset(prevOffset => (prevOffset + (1 * RATE)) % width);
       animationFrameId = requestAnimationFrame(animate);
     };
     animate();
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [width]);
 
   return (
+    <div style={{width: '100%'}}>
     <div className="relative w-full h-[90px] bg-[#F9F041] overflow-hidden">
       <div
         ref={bannerRef}
-        className="absolute top-0 left-0 w-full h-[90px] bg-[url('/icons.png')] bg-repeat-x bg-center"
-        style={{ transform: `translateX(${offset}px)` }}
+        className="absolute top-[13px] left-0 h-[90px] bg-[url('/img/roach.png')] bg-repeat-x"
+        style={{ width: widthRequirement * BUG_WIDTH, transform: `translateX(${offset}px)` }}
       >
       </div>
       <div
-        className="absolute top-0 left-0 w-full h-[90px] bg-[url('/icons.png')] bg-repeat-x  bg-center"
-        style={{ transform: `translateX(${offset - width}px)` }}
+        className="absolute top-[13px] left-0 h-[90px] bg-[url('/img/roach.png')] bg-repeat-x"
+        style={{ width: widthRequirement * BUG_WIDTH, transform: `translateX(${offset - (widthRequirement + .25) * BUG_WIDTH}px)` }}
       >
       </div>
     </div>
+  </div>
   );
 };
 

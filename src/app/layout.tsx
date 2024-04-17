@@ -6,7 +6,7 @@ import { APP_NAME, APP_DESC } from './config'
 
 // Define URLs for localhost and production environments based on NODE_ENV
 const isProduction = process.env.NODE_ENV === 'production';
-export const BASE_URL = isProduction ? 'https://acme.com' : 'http://localhost:3000';
+const BASE_URL = isProduction ? 'https://cockroach.vercel.app' : 'http://localhost:3000';
 
 
 
@@ -32,11 +32,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="msapplication-TileColor" content="#da532c" />
-<meta name="theme-color" content="#ffffff" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#111" />
       </head>
       <body>{children}</body>
     </html>

@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useState } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import { useCountUp } from 'react-countup';

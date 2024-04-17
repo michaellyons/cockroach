@@ -19,5 +19,12 @@
   "tokenomics": {
     "subtitle1": "",
     "description": "We’ve used this new standard to build in both holder rewards, community incentive, and deflation. This new token standard allows us to tax buy and sell transactions 5% of the tokens as a transfer fee. We redistribute 3% of this fee back to token holders regularly. Of the remaining .2%, 1% gets burned and 1% gets distributed back to the DAO for governance."
+  },
+  "daoSummary": {
+    "title": "COCKR_OACH DAO",
+    "description": "15% & 1% of every transaction will go towards the COCKR_OACH DAO. Hosted on Realms, the DAO will take over governance of $COCKR and cam use the funds for various campaigns and initiatives to help promote the adoption and community around $COCKR or the Solana exosystem more generally.",
+    "buttonText": "Realm DAO Link",
+    "donatedTitle": "Donated",
+    "totalFundsTitle": "Total Funds"
   }
 }
